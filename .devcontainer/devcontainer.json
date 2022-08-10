@@ -1,0 +1,32 @@
+{
+  "name": "julia",
+  "dockerComposeFile": "../docker-compose.yml",
+  "workspaceFolder": "/home/julian/src",
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bash",
+        "icon": "terminal-bash"
+      },
+      "zsh": {
+        "path": "zsh"
+      },
+      "fish": {
+        "path": "fish"
+      },
+      "tmux": {
+        "path": "tmux",
+        "icon": "terminal-tmux"
+      },
+      "pwsh": {
+        "path": "pwsh",
+        "icon": "terminal-powershell"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "julia.environmentPath": "/usr/local/julia/bin/"
+  },
+  "service": "julia",
+  "extensions": ["julialang.langage-julia"],
+  "shutdownAction": "stopCompose"
+}

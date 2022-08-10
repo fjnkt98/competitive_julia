@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  julia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - UID=1000
+        - USERNAME=julian
+        - PASSWORD=julian
+    image: fjnkt98/competitive_julia
+    container_name: competitive_julia
+    tty: true
+
+    volumes:
+      - /home/${USER}/.ssh:/home/julian/.ssh:ro
+      - /home/${USER}/.gitconfig:/home/julian/.gitconfig:ro
+      - ./src:/home/julian/src
+    
